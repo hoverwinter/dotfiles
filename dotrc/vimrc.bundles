@@ -68,7 +68,7 @@ Plugin 'terryma/vim-expand-region' " 区域选中
 Plugin 'docunext/closetag.vim'  " 成对符号自动补全
 Plugin 'tpope/vim-surround'     "  环绕符号处理
 Plugin 'tpope/vim-repeat'   " 重复命令
-Plugin 'Valloric/YouCompleteMe' " 自动补全
+" Plugin 'Valloric/YouCompleteMe' " 自动补全
 Plugin 'godlygeek/tabular' " Markdown依赖
 Plugin 'plasticboy/vim-markdown' " Markdown插件
 

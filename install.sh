@@ -9,7 +9,7 @@ then
 fi
 
 echo "============ Install Software ==========="
-sfrs=(zsh tmux git vim terminator curl wget ctags cmake clang build-essential python-dev silversearcher-ag ack-grep)
+sfrs=(zsh tmux git vim terminator curl wget exuberant-ctags cmake clang build-essential python-dev silversearcher-ag ack-grep)
 
 #
 #   for the reason that build-essential and python-dev etc have no suitable cmd for which,
@@ -46,4 +46,3 @@ chmod 744 ${cst_ft_dir}/Monaco.ttf
 mkfontscale
 mkfontdir
 fc-cache -fv
-
