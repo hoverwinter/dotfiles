@@ -33,39 +33,10 @@ conf_zsh() {
         [ -e $item ] && mv $item $item.$DATE
     done
 
-    ln -s $BASEDIR/shell/zsh/oh-my-zsh $HOME/.oh-my-zsh
-    ln -s $BASEDIR/shell/zsh/zshrc $HOME/.zshrc
-}
-
-# config vundle
-install_vundle() {
-    mkdir -p .vim/bundle/
-    VUNDLE_DIR=$HOME/.vim/bundle/vundle
-    [ -e $VUNDLE_DIR ] && mv $VUNDLE_DIR $VUNDLE_DIR.$DATE
-    git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-}
-
-# config vim
-conf_vim() {
-    for item in $HOME/.vimrc $HOME/.vim.bundles
-    do
-        [ -L $item ] && unlink $item
-    done
-
-    for item in $HOME/.vimrc $HOME/.vim.bundles
-    do
-        [ -e $item ] && mv $item $item.$DATE
-    done
-
-    install_vundle
-    
-    ln -s $BASEDIR/dotrc/vimrc $HOME/.vimrc
-    ln -s $BASEDIR/dotrc/vimrc.bundles $HOME/.vimrc.bundles
-
-    vim +PluginInstall +qall
+    ln -s $BASEDIR/shell/oh-my-zsh $HOME/.oh-my-zsh
+    cp $BASEDIR/shell/oh-my-zsh/templates/zshrc.zsh-template $HOME/.zshrc
 }
 
 conf_term
 conf_zsh
-conf_vim
 
