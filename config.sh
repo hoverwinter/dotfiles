@@ -15,13 +15,18 @@ conf_term() {
     else
         mkdir -p $TERM_CONFIG_DIR
     fi
-    ln -s $BASEDIR/dotconf/terminator.conf $TERM_CONFIG_DIR/config
+
+    [ -L $TERM_CONFIG_DIR/config ] && unlink $TERM_CONFIG_DIR/config
+    ln -s $BASEDIR/terminator/config $TERM_CONFIG_DIR/config
 }
 
 
 # config oh-my-zsh
 conf_zsh() {
-    chsh -s /bin/zsh
+    if [ "$SHELL" != "/bin/zsh" ]
+        echo "Input your password to set default shell to zsh:"
+        chsh -s /bin/zsh
+    fi
 
     for item in $HOME/.zshrc $HOME/.oh-my-zsh
     do
