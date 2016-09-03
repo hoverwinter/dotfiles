@@ -40,7 +40,7 @@ then
     mkdir -p $cst_ft_dir
 fi
 
-cp Monaco.ttf $cst_ft_dir
+cp fonts/Monaco.ttf $cst_ft_dir
 chmod 744 ${cst_ft_dir}/Monaco.ttf
 
 mkfontscale
