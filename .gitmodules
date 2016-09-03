@@ -1,3 +1,6 @@
 [submodule "vim"]
 	path = vim
 	url = git@github.com:hoverwinter/vim
+[submodule "shell/oh-my-zsh"]
+	path = shell/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh
