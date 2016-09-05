@@ -24,6 +24,7 @@ conf_term() {
 # config oh-my-zsh
 conf_zsh() {
     if [ "$SHELL" != "/bin/zsh" ]
+    then
         echo "Input your password to set default shell to zsh:"
         chsh -s /bin/zsh
     fi
@@ -42,6 +43,15 @@ conf_zsh() {
     cp $BASEDIR/shell/oh-my-zsh/templates/zshrc.zsh-template $HOME/.zshrc
 }
 
+# config tmux
+conf_tmux () {
+
+    [ -f $HOME/.tmux.conf ] && mv $HOME/.tmux.conf $HOME/.tmux.conf.$DATE
+    [ -L $HOME/.tmux.conf ] && unlink $HOME/.tmux.conf
+
+    ln -s $BASEDIR/tmux/tmux.conf ~/.tmux.conf
+}
+
 conf_term
 conf_zsh
-
+conf_tmux
