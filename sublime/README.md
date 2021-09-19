@@ -1,3 +1,0 @@
-## dotfiles
-
-used for ubuntu
