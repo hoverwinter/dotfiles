@@ -7,9 +7,12 @@ For more information please refer the following posts:
 
 
 ## Install 
-
-    git clone https://github.com/hoverwinter/dotfiles .
-    cd dotfiles
+    
+    cd ~
+    git clone https://github.com/hoverwinter/dotfiles 
+    cd ~/dotfiles
+    git submodule init
+    git submodule update
     bash install.sh
     bash config.sh
 

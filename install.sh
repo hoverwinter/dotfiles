@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "Plz run with bash"
 # Install Softwares
 
 if [[ $UID -ne 0 ]]
@@ -9,7 +10,7 @@ then
 fi
 
 echo "============ Install Software ==========="
-sfrs=(zsh tmux git vim terminator curl wget exuberant-ctags cmake clang build-essential python-dev silversearcher-ag ack-grep)
+sfrs=(zsh tmux git vim terminator curl wget exuberant-ctags cmake clang build-essential python-dev silversearcher-ag ack-grep binutils)
 
 #
 #   for the reason that build-essential and python-dev etc have no suitable cmd for which,
@@ -24,7 +25,7 @@ do
     then
         echo "ALREADY INSTALLED: $sf"
     else
-        apt-get install $sf
+        apt-get install -y $sf
     fi
 done
 
