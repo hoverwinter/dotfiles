@@ -1,10 +1,10 @@
 ** 2021/09/19
-**** DONE emacs插件安装失败: company-lsp autopair
-**** DONE git submodule 问题
-**** TODO bash安装方可成功，无法使用zsh
-**** TODO git安装没有太大必要，但是 git config 需要提示
-**** TODO ssh-key没有提示
-**** TODO githubusercontent无法访问
-**** TODO vim插件报错：YouCompleteMe安装时间太快，the ycmd server shut down. YCM core library not detected.
-**** TODO 汉语拼音没有支持
+- DONE emacs插件安装失败: company-lsp autopair
+- DONE git submodule 问题
+- TODO bash安装方可成功，无法使用zsh
+- TODO git安装没有太大必要，但是 git config 需要提示
+- TODO ssh-key没有提示
+- TODO githubusercontent无法访问
+- TODO vim插件报错：YouCompleteMe安装时间太快，the ycmd server shut down. YCM core library not detected.
+- TODO 汉语拼音没有支持
 
